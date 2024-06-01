@@ -331,18 +331,18 @@ ol {
 	z-index: 99;
 	background-color: #000768; /* Solid background color */
     color: white; /* Text color */
-    padding: 10px;
+    padding: 30px;
 }
 
 .logo a {
 	display: inline-block;
-	width: 50%;
+	width: 75%
 }
 
 .nav-menu {
 	text-align:center;
-	text-size-adjust: 20px;
-	-webkit-text-size-adjust: 20px;
+	text-size-adjust: 30px;
+	-webkit-text-size-adjust: 30px;
 }
 
 .nav-menu ul li {
@@ -396,8 +396,6 @@ ol {
 .nav-menu ul li:hover>a {
 	color: #fae102;
 }
-
-
 
 .nav-menu ul li:hover .dropdown {
 	opacity: 1;
@@ -1148,7 +1146,7 @@ ol {
 }
 
 .fs-about .fa-social a {
-	font-size: 14px;
+	font-size: 20px;
 	color: #c4c4c4;
 	margin-right: 10px;
 }
@@ -1157,12 +1155,26 @@ ol {
 	margin-right: 0;
 }
 
+.fs-widget .fa-social a {
+	font-size: 50px;
+	color: #c4c4c4;
+	margin-top: 0px;
+	margin-right: 10px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.fs-widget .fa-social a:last-child {
+	margin-right: 0;
+}
+
 .fs-widget {
 	margin-bottom: 30px;
 }
 
 .fs-widget h4 {
-	color: #ffffff;
+	margin-top: 30px;
+	color: #c4c4c4;
 	font-weight: 600;
 	margin-bottom: 18px;
 }
