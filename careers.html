@@ -6,7 +6,7 @@
         <meta name="keywords" content="Gym, Balewadi, High Street, Pune, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>New Offers | A5Fitness</title>
+        <title>Careers | A5Fitness</title>
     
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -23,6 +23,135 @@
         <link rel="stylesheet" href="./css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="./css/styles.css" type="text/css">
     </head>
+    <style>
+        
+:root {
+	--box-height: 40px;
+	--border-radius: 5px;
+	--space-between: 20px;
+	--font-size: 16px;
+  
+	--color-0: #ffffff;
+	--color-1: #000;
+	--color-2: #000;
+	--color-3: #ffffff;
+	--color-4: #fae102;
+	--color-5: #ce4257;
+  }
+  
+  * {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+	box-sizing: border-box;
+  }
+  
+  #survey-container {
+	margin: 20px auto;
+	padding: 30px 20px;
+	width: 100%;
+	max-width: 840px;
+	border-radius: calc(3 * var(--border-radius));
+    
+  }
+  
+  input, input::placeholder {
+    color:white;
+}
+  
+  #title {
+	margin: 30px 0;
+	text-align: center;
+	font-family: "Kumbh Sans", sans-serif;
+	font-size: 50px;
+	text-transform: capitalize;
+	color: var(--color-3);
+  }
+  
+  #description {
+	margin: 30px 0;
+	padding: 5px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	color: var(--color-3);
+  }
+  
+  #survey-form {
+	padding: 30px;
+	padding-top: 20px;
+	background: var(--color-1);
+	opacity: 98%;
+	border: none;
+	border-radius: calc(2 * var(--border-radius));
+  }
+  
+  #survey-form * {
+	font-size: var(--font-size);
+  }
+
+  .row-label,
+  .row-input {
+	padding: 5px 10px;
+	margin: 0;
+	height: var(--box-height);
+	width: 100%;
+	display: block;
+  }
+  
+  .row-label {
+	color: var(--color-3);
+	font-weight: 600;
+  }
+  
+  .row-label:not(:first-child) {
+	margin-top: var(--space-between);
+  }
+  
+  .row-input:not(.small) {
+	background: #151515;
+	border: none;
+	border-radius: var(--border-radius);
+  }
+  
+  .inline-label {
+	margin-left: 10px;
+	font-size: 14px;
+	color: var(--color-3);
+  }
+  
+  .small {
+	height: calc(var(--box-height) * 0.75);
+  }
+  
+  #comments {
+	padding: 10px;
+	margin: 0;
+	height: 120px;
+	width: 100%;
+	background: #151515;
+	border: none;
+	border-radius: var(--border-radius);
+	resize: none;
+  }
+
+  #submit {
+	margin-top: calc(2 * var(--space-between));
+	height: var(--box-height);
+	width: 100%;
+	background: var(--color-4);
+	border: none;
+	border-radius: var(--border-radius);
+	color: white;
+	font-weight: 600;
+	cursor: pointer;
+	text-transform: capitalize;
+  }
+  
+  #submit:hover {
+	box-shadow: 0 0 2px var(--color-3);
+  }
+    </style>
 <body>
         <!-- Offcanvas Menu Section Begin -->
         <div class="offcanvas-menu-overlay"></div>
@@ -70,14 +199,14 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html">Home</a></li>
                             <li><a href="./offers.html">New Offers</a></li>
                             <li><a href="./membership.html">Membership</a></li>
                             <li><a href="./corporate.html">Corporate Offers</a></li>
                             <li><a href="./training.html">Personal Training</a></li>
                             <li><a href="./batches.html">Batches</a></li>
                             <li><a href="./nutrition.html">Nutrition</a></li>
-                            <li><a href="./careers.html">Careers</a></li>
+                            <li class="active"><a href="./careers.html">Careers</a></li>
                             <li><a href="./contact.html">Contact Us</a></li>
                         </ul>
                     </nav>
@@ -103,6 +232,53 @@
         </div>
     </header>
     <!-- Header End -->
+
+    <!--Form Section-->
+<section class="pricing-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Join Our Team</span>
+                    <h2>Please fill the form below to apply</h2>
+                </div>
+            </div>
+        </div>
+    <div id="survey-container">
+        <form id="survey-form" action="#">
+      
+        <!-- name -->
+        <label id="name-label" class="row-label" for="name">Name:</label>
+        <input id="name" class="row-input" type="text" placeholder="Enter your name" required>
+      
+        <!-- email -->
+        <label id="email-label" class="row-label" for="email">Email:</label>
+        <input id="email" class="row-input" type="email" placeholder="Enter your email" required>
+
+        <!-- phone -->
+        <label id="phone-label" class="row-label" for="phone">Phone:</label>
+        <input id="phone" class="row-input" type="tel" placeholder="Enter your phone number" required>
+      
+        <!-- years of experience -->
+        <label id="years-label" class="row-label" for="years">Experience in Years:</label>
+        <input id="years" class="row-input" type="number" placeholder="Enter number of years of experience" min="0" max="50">
+
+        <!-- certification -->
+        <label id="certification-label" class="row-label" for="certification">Certification:</label>
+        <input id="certification" class="row-input" type="text" placeholder="Enter Names of Certifications">
+      
+        <!-- comments textarea -->
+        <label class="row-label" for="comments">Additional information:</label>
+        <textarea id="comments" placeholder="Enter other information here..."></textarea>
+      
+        <!-- submit button -->
+        <button id="submit" type="submit">Submit</button>
+      
+        </form>
+      
+      </div>
+</section>
+    <!--Form Section End-->
         
     <!-- Get In Touch Section Begin -->
         <div class="gettouch-section">
@@ -204,5 +380,27 @@
             </div>
         </section>
         <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/masonry.pkgd.min.js"></script>
+    <script src="./js/jquery.barfiller.js"></script>
+    <script src="./js/jquery.slicknav.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 </html>
