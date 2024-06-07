@@ -23,7 +23,140 @@
         <link rel="stylesheet" href="./css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="./css/styles.css" type="text/css">
     </head>
+    <style>
+        :root {
+            --box-height: 40px;
+            --border-radius: 5px;
+            --space-between: 20px;
+            --font-size: 16px;
+        
+            --color-0: #ffffff;
+            --color-1: #000;
+            --color-2: #000;
+            --color-3: #ffffff;
+            --color-4: #fae102;
+            --color-5: #ce4257;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Montserrat", sans-serif;
+            box-sizing: border-box;
+        }
+        
+        #survey-container {
+            margin: 20px auto;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 840px;
+            border-radius: calc(3 * var(--border-radius));
+            
+        }
+        
+        input, input::placeholder {
+            color:white;
+        }
+        
+        #title {
+            margin: 30px 0;
+            text-align: center;
+            font-family: "Kumbh Sans", sans-serif;
+            font-size: 50px;
+            text-transform: capitalize;
+            color: var(--color-3);
+        }
+        
+        #description {
+            margin: 30px 0;
+            padding: 5px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--color-3);
+        }
+        
+        #survey-form {
+            padding: 30px;
+            padding-top: 20px;
+            background: var(--color-1);
+            opacity: 98%;
+            border: none;
+            border-radius: calc(2 * var(--border-radius));
+        }
+        
+        #survey-form * {
+            font-size: var(--font-size);
+        }
+
+        .row-label,
+        .row-input {
+            padding: 5px 10px;
+            margin: 0;
+            height: var(--box-height);
+            width: 100%;
+            display: block;
+        }
+        
+        .row-label {
+            color: var(--color-3);
+            font-weight: 600;
+        }
+        
+        .row-label:not(:first-child) {
+            margin-top: var(--space-between);
+        }
+        
+        .row-input:not(.small) {
+            background: #151515;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+        
+        .inline-label {
+            margin-left: 10px;
+            font-size: 14px;
+            color: var(--color-3);
+        }
+        
+        .small {
+            height: calc(var(--box-height) * 0.75);
+        }
+        
+        #comments {
+            padding: 10px;
+            margin: 0;
+            height: 120px;
+            width: 100%;
+            background: #151515;
+            border: none;
+            border-radius: var(--border-radius);
+            resize: none;
+        }
+
+        #submit {
+            margin-top: calc(2 * var(--space-between));
+            height: var(--box-height);
+            width: 100%;
+            background: var(--color-4);
+            border: none;
+            border-radius: var(--border-radius);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+        
+        #submit:hover {
+            box-shadow: 0 0 2px var(--color-3);
+        }
+    </style>
 <body>
+        <!-- Page Preloader -->
+        <div id="preloader">
+        <div class="loader"></div>
+        </div>    
+         
         <!-- Offcanvas Menu Section Begin -->
         <div class="offcanvas-menu-overlay"></div>
         <div class="offcanvas-menu-wrapper">
@@ -55,184 +188,253 @@
         </div>
         </div>
         <!-- Offcanvas Menu Section End -->
+        
+        <!-- Header Section Begin -->
+        <header class="header-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="./img/logoFinal.png" alt="A5Fitness">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./offers.html">New Offers</a></li>
+                                <li><a href="./membership.html">Membership</a></li>
+                                <li><a href="./corporate.html">Corporate Offers</a></li>
+                                <li><a href="./training.html">Personal Training</a></li>
+                                <li><a href="./batches.html">Batches</a></li>
+                                <li class="active"><a href="./nutrition.html">Nutrition</a></li>
+                                <li><a href="./careers.html">Careers</a></li>
+                                <li><a href="./contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="top-option">
+                            <div class="to-search search-switch">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="to-social">
+                                <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://wa.me/+917620783050"><i class="fa fa-whatsapp"></i></a>
+                                <a href="tel:+917620783050"><i class="fa fa-phone"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canvas-open">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                </div>
 
-            <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="logo">
-                        <a href="./index.html">
-                            <img src="./img/logoFinal.png" alt="A5Fitness">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="nav-menu">
-                        <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./offers.html">New Offers</a></li>
-                            <li><a href="./membership.html">Membership</a></li>
-                            <li><a href="./corporate.html">Corporate Offers</a></li>
-                            <li><a href="./training.html">Personal Training</a></li>
-                            <li><a href="./batches.html">Batches</a></li>
-                            <li><a href="./nutrition.html">Nutrition</a></li>
-                            <li><a href="./careers.html">Careers</a></li>
-                            <li><a href="./contact.html">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="top-option">
-                        <div class="to-search search-switch">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <div class="to-social">
-                            <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://wa.me/+917620783050"><i class="fa fa-whatsapp"></i></a>
-                            <a href="tel:+917620783050"><i class="fa fa-phone"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="canvas-open">
-                    <i class="fa fa-bars"></i>
-                </div>
             </div>
+        </header>
+        <!-- Header End -->
 
-        </div>
-    </header>
-    <!-- Header End -->
-
-    <!-- Get In Touch Section Begin -->
-    <div class="gettouch-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gt-text">
-                        <i class="fa fa-map-marker"></i>
-                        <p><a href="https://maps.app.goo.gl/XeAff47RbaVyzniGA"> Panchshil Business Park Phase 2,<br>Balewadi High Street,<br>Pune, Maharashtra - 411045 </a></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gt-text">
-                        <i class="fa fa-phone"></i>
-                        <ul>
-                            <li><a href="tel:+917620783050">76207 83050</a></li>
-                            <li><a href="tel:+917620783050">76207 83050</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gt-text">
-                        <i class="fa fa-envelope"></i>
-                        <br>
-                        <p><a href="mailto:a5fitnessbhs@gmail.com">a5fitnessbhs@gmail.com</a></p>
+        <!-- Breadcrumb Section Begin -->
+        <section class="breadcrumb-section set-bg" data-setbg="./img/services-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="breadcrumb-text">
+                            <h2>Nutrition</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Get In Touch Section End -->
+        </section>
+        <!-- Breadcrumb Section End -->
 
-    <!-- Footer Section Begin -->
-    <section class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="fs-about">
-                        <div class="fa-logo">
-                            <a href="./index.html"><img src="./img/logo-footer.png" alt="A5Fitness"></a>
+        <!-- Gallery Section Begin -->
+             <section class="classes-section spad">
+                <div class="gallery-section">
+                    <div class="gallery">
+                        <div class="grid-sizer"></div>
+                        <div class="gs-item grid-wide set-bg" data-setbg="./img/index/counsellingroom.jpg">
+                            <a href="./img/index/counsellingroom.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
                         </div>
-                        <p>Panchshil Business Park Phase 2,<br>Balewadi High Street,<br>Pune, Maharashtra - 411045</p>
-                        <div class="fa-social">
-                            <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://wa.me/+917620783050"><i class="fa fa-whatsapp"></i></a>
-                            <a href="tel:+917620783050"><i class="fa fa-phone"></i></a>
-                            <a href="mailto:a5fitnessbhs@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <div class="gs-item set-bg" data-setbg="./img/gallery/IMG_5411.jpg">
+                            <a href="./img/gallery/IMG_5411.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                        <div class="gs-item set-bg" data-setbg="./img/gallery/IMG_0386.jpg">
+                            <a href="./img/gallery/IMG_0386.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                        <div class="gs-item set-bg" data-setbg="./img/gallery/IMG_5446.jpg">
+                            <a href="./img/gallery/IMG_5446.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                        <div class="gs-item set-bg" data-setbg="./img/gallery/IMG_5596.jpg">
+                            <a href="./img/gallery/IMG_5596.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                        <div class="gs-item grid-wide set-bg" data-setbg="./img/index/grpactivity.jpg">
+                            <a href="./img/gallery/IMG_0755.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="fs-widget">
-                        <h4>Sitemap</h4>
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./offers.html">New Offers</a></li>
-                            <li><a href="./membership.html">Membership</a></li>
-                            <li><a href="./corporate.html">Corporate Offers</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
-                        </ul>
+             </section>
+        <!-- Gallery Section End -->
+    
+        <!--Form Section-->
+        <section class="pricing-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <span>Book An Appointment</span>
+                            <h2>Please fill the form below</h2>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="fs-widget">
-                        <h4>Sitemap</h4>
-                        <ul>
-                            <li><a href="./about-us.html">About Us</a></li>
-                            <li><a href="./careers.html">Careers</a></li>
-                            <li><a href="./services.html">Services</a></li>
-                            <li><a href="./training.html">Personal Training</a></li>
-                            <li><a href="./nutrition.html">Nutrition</a></li>
-                            <li><a href="./batches.html ">Batches</a></li>
-                        </ul>
+            <div id="survey-container">
+                <form id="survey-form" action="#">
+            
+                <!-- name -->
+                <label id="name-label" class="row-label" for="name">Name:</label>
+                <input id="name" class="row-input" type="text" placeholder="Enter your name" required>
+            
+                <!-- email -->
+                <label id="email-label" class="row-label" for="email">Email:</label>
+                <input id="email" class="row-input" type="email" placeholder="Enter your email" required>
+
+                <!-- phone -->
+                <label id="phone-label" class="row-label" for="phone">Phone:</label>
+                <input id="phone" class="row-input" type="tel" placeholder="Enter your phone number" required>
+            
+                <!-- comments textarea -->
+                <label class="row-label" for="comments">Additional information:</label>
+                <textarea id="comments" placeholder="Enter other information here..."></textarea>
+            
+                <!-- submit button -->
+                <button id="submit" type="submit">SUBMIT</button>
+            
+                </form>
+            
+            </div>
+        </section>
+        <!--Form Section End-->
+
+        <!-- Get In Touch Section Begin -->
+        <div class="gettouch-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="gt-text">
+                            <i class="fa fa-map-marker"></i>
+                            <p><a href="https://maps.app.goo.gl/XeAff47RbaVyzniGA"> Panchshil Business Park Phase 2,<br>Balewadi High Street,<br>Pune, Maharashtra - 411045 </a></p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="fs-widget">
-                        <h4>Follow Us!</h4>
-                        <!-- <div class="fa-social">
-                            <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i><h4>Follow Us on Instagram!</h4></a>
+                    <div class="col-md-4">
+                        <div class="gt-text">
+                            <i class="fa fa-phone"></i>
+                            <ul>
+                                <li><a href="tel:+917620783050">76207 83050</a></li>
+                                <li><a href="tel:+917620783050">76207 83050</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="gt-text">
+                            <i class="fa fa-envelope"></i>
                             <br>
-                            <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i><h4>Follow Us on Facebook!</h4></a>
-                        </div> -->
-                        <div class="fa-social">
-                            <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://wa.me/+917620783050"><i class="fa fa-whatsapp"></i></a>
-                            <a href="tel:+917620783050"><i class="fa fa-phone"></i></a>
-                            <a href="mailto:a5fitnessbhs@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                            <p><a href="mailto:a5fitnessbhs@gmail.com">a5fitnessbhs@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="copyright-text">
-                        <p>
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | Made by <a href="https://madhurj20.github.io/A5Fitness/" target="_blank" rel="noopener">A5Fitness</a>
-                        </p>
+        </div>
+        <!-- Get In Touch Section End -->
+
+        <!-- Footer Section Begin -->
+        <section class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="fs-about">
+                            <div class="fa-logo">
+                                <a href="./index.html"><img src="./img/logo-footer.png" alt="A5Fitness"></a>
+                            </div>
+                            <p>Panchshil Business Park Phase 2,<br>Balewadi High Street,<br>Pune, Maharashtra - 411045</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="fs-widget">
+                            <h4>Sitemap</h4>
+                            <ul>
+                                <li><a href="./index.html">Home</a></li>
+                                <li><a href="./offers.html">New Offers</a></li>
+                                <li><a href="./membership.html">Membership</a></li>
+                                <li><a href="./corporate.html">Corporate Offers</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="fs-widget">
+                            <h4>Sitemap</h4>
+                            <ul>
+                                <li><a href="./about-us.html">About Us</a></li>
+                                <li><a href="./careers.html">Careers</a></li>
+                                <li><a href="./services.html">Services</a></li>
+                                <li><a href="./training.html">Personal Training</a></li>
+                                <li><a href="./nutrition.html">Nutrition</a></li>
+                                <li><a href="./batches.html ">Batches</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="fs-widget">
+                            <h4>Follow Us!</h4>
+                            <div class="fa-social">
+                                <a href="https://www.facebook.com/a5fitness/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/a5_fitnessbhs/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://wa.me/+917620783050"><i class="fa fa-whatsapp"></i></a>
+                                <a href="tel:+917620783050"><i class="fa fa-phone"></i></a>
+                                <a href="mailto:a5fitnessbhs@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="copyright-text">
+                            <p>
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | Made by <a href="https://madhurj20.github.io/A5Fitness/" target="_blank" rel="noopener">A5Fitness</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Footer Section End -->
+        </section>
+        <!-- Footer Section End -->
 
-    <!-- Search model Begin -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
+        <!-- Search model Begin -->
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">+</div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Search here.....">
+                </form>
+            </div>
         </div>
-    </div>
-    <!-- Search model end -->
+        <!-- Search model end -->
 
-    <!-- Js Plugins -->
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/jquery.magnific-popup.min.js"></script>
-    <script src="./js/masonry.pkgd.min.js"></script>
-    <script src="./js/jquery.barfiller.js"></script>
-    <script src="./js/jquery.slicknav.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/main.js"></script>
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/jquery.barfiller.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
 
 </body>
 </html>

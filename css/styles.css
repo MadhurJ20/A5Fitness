@@ -456,7 +456,7 @@ ol {
 }
 
 .top-option .to-search i {
-	font-size: 20px;
+	font-size: 30px;
 	color: #ffffff;
 	cursor: pointer;
 }
@@ -468,7 +468,7 @@ ol {
 .top-option .to-social a {
 	display: inline-block;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 30px;
 	margin-left: 15px;
 }
 
@@ -2895,7 +2895,7 @@ ol {
 	.canvas-open {
 		position: absolute;
 		right: 40px;
-		top: 20px;
+		top: 45px;
 		font-size: 22px;
 		width: 30px;
 		height: 30px;
@@ -2958,7 +2958,7 @@ ol {
 	}
 	.offcanvas-menu-wrapper .canvas-social a {
 		display: inline-block;
-		font-size: 16px;
+		font-size: 25px;
 		color: #363636;
 		margin-right: 6px;
 	}
@@ -3041,7 +3041,7 @@ ol {
 	.canvas-open {
 		position: absolute;
 		right: 40px;
-		top: 20px;
+		top: 45px;
 		font-size: 22px;
 		width: 30px;
 		height: 30px;
@@ -3104,7 +3104,7 @@ ol {
 	}
 	.offcanvas-menu-wrapper .canvas-social a {
 		display: inline-block;
-		font-size: 16px;
+		font-size: 25px;
 		color: #363636;
 		margin-right: 6px;
 	}
