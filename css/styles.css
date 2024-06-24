@@ -1156,7 +1156,7 @@ ol {
 }
 
 .fs-widget .fa-social a {
-	font-size: 50px;
+	font-size: 40px;
 	color: #c4c4c4;
 	margin-top: 0px;
 	margin-right: 10px;
@@ -1299,6 +1299,45 @@ ol {
 }
 
 /*---------------------
+  Careers Section
+-----------------------*/
+
+.careers-text {
+	background: #151515;
+	padding: 100px 100px 0;
+}
+
+.careers-text .careers-desc {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.careers-text .careers-desc h1 {
+	font-size: 36px;
+	color: #fae102;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 20px 0 40px;
+}
+
+.careers-text .careers-desc h2 {
+	font-size: 30px;
+	color: #fae102;
+	text-shadow: 1px 1px 2px black;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 20px 0;
+}
+
+.careers-text .careers-desc h3,h4 {
+	color: #ffffff;
+	margin: 15px 0;
+}
+
+
+/*---------------------
   About Us Section
 -----------------------*/
 
@@ -1375,6 +1414,20 @@ ol {
 
 .about-text .about-bar .ab-item .barfiller .tip:after {
 	display: none;
+}
+
+.about-text .about-desc {
+	color: #a9a9a9;
+	font-size: 20px;
+}
+
+.about-text .about-desc h2 {
+	font-size: 36px;
+	color: #fae102;
+	text-shadow: 1px 1px 2px black;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 20px 0px;
 }
 
 /*---------------------
